@@ -6,6 +6,16 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = "./cookbooks"
 
     chef.add_recipe "gitlab"
+
+    chef.json = {
+      :authorization => {
+        :sudo => {
+          :groups => [],
+          :users => %w{ vagrant },
+          :passwordless => true
+        }
+      }
+    }
   end
 
   config.vm.forward_port 80, 4567 # method call
