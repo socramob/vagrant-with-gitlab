@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
   config.vm.box = "lucid32-with-ruby1.9"
-  config.vm.box_url = "file://./lucid32-with-ruby1.9.box"
+  config.vm.box_url = "./lucid32-with-ruby1.9.box"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./cookbooks"
