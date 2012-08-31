@@ -1,0 +1,3 @@
+[submodule "vendor/gitlab"]
+	path = vendor/gitlab
+	url = gh:one-os/cookbook-gitlab.git
