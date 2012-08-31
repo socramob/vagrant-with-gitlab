@@ -4,6 +4,8 @@ Vagrant::Config.run do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./cookbooks"
+
+    chef.add_recipe "gitlab"
   end
 
   config.vm.forward_port 80, 4567 # method call
